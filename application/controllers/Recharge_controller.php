@@ -66,5 +66,15 @@ class Recharge_controller extends CI_Controller {
     $this->load->view('Recharge/register');
   }
 
+  public function myacc()
+  {
+    $this->load->view('Recharge/myacc');
+  }
+
+  function logout(){
+      $this->session->sess_destroy();
+      $this->load->view('login.php');
+  }
+
 }
 ?>

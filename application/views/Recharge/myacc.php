@@ -1,10 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <style type="text/css">
+        <?php include'css/style.css'; ?>
+    </style>
+</head>
+<body>
+
+</body>
+</html>
+
+
 <?php
-include('./include/css.php');
-include('./include/header.php'); ?>
+include('include/css.php');
+include('include/header.php'); ?>
 <!-- <div class="back-button"><a href="#!"><i class="fa fa-arrow-left" title="Back"></i><span>Back</span></a></div> -->
 <div class="logo-margin-top">
     <div class="heading-md">
-        <h1 class="heading1 gradient">Hi Govind Singh!</h1>
+        <h1 class="heading1 gradient"><?php echo $this->session->userdata('username'); ?></h1>
         <!-- <h2 class="heading2">Welcome back to Tata Sky and select your next action</h2> -->
     </div>
 </div>
@@ -58,6 +72,6 @@ include('./include/header.php'); ?>
 </div>
 
 <?php
-include('./include/footer.php');
-include('./include/footerjs.php');
+include('include/footer.php');
+include('include/footerjs.php');
 ?>

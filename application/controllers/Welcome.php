@@ -130,9 +130,14 @@ class Welcome extends CI_Controller {
              $category = $this->session->userdata('user_type');
 
               if($level === '0' && $category === 'admin'){
-              	// print_r($this->session->userdata('level'));
+              	
                $this->load->view('Admin/index.php');
-              	// redirect($this->index());
+              
+
+              }
+              else if($level === '1' && $category === 'user'){
+               
+                   print_r(json_encode(1));
 
               }
               else{
