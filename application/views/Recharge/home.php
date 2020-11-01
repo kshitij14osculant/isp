@@ -1,6 +1,14 @@
+<style type="text/css">
+    .homeimg
+    {
+        width: 50%;
+        max-height:200px;
+    }
+</style>
+
 <div class="logo-margin-top" id="toptic">
     <p class="mbL40">
-        <img src="https://www.tatasky.com/assets/images/tata-sky-big-logo.png" alt="" title="" />
+        <img src="<?php echo base_url('assets/img/jetway.jpeg'); ?>" class="homeimg"alt="" title="" />
     </p>
     <div class="center">
         <ul class="home">
@@ -11,7 +19,7 @@
             </li>
             <li class="home-btn">
                 <a href="<?php echo base_url('index.php/Recharge_controller/newcust'); ?>" class="home-btn-link">
-                    Not a Tata Sky Customer
+                    Not a Jetway Customer
                 </a>
             </li>
         </ul>

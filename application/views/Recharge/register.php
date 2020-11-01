@@ -18,8 +18,8 @@ include('include/header.php'); ?>
 <div class="back-button backbutton"><a href="#!"><i class="fa fa-arrow-left" title="Back"></i><span>Back</span></a></div>
 <div class="logo-margin-top">
     <div class="heading-md">
-        <h1 class="heading1 gradient">Welcome to a new & exciting Tata Sky!</h1>
-        <h2 class="heading2">Log in to manage your Tata Sky account</h2>
+        <h1 class="heading1 gradient">Welcome to a new & exciting Jetway!</h1>
+        <h2 class="heading2">Log in to manage your Jetway account</h2>
     </div>
 </div>
 <div class="center">

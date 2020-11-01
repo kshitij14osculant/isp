@@ -17,6 +17,7 @@
                  <li><a href="./#clients">Clients</a></li>
                  <li><a href="./#about">About</a></li>
                  <li><a href="./#contact">Contact</a></li>
+                 <li><a href="<?php echo base_url('index.php/Recharge_controller/') ?>">Recharge</a></li>
                  <li><a href="<?php echo base_url('index.php/Welcome/about_services') ?>">Our Vision</a></li>
              </ul>
          </nav><!-- .nav-menu -->

@@ -1,26 +1,35 @@
+<style type="text/css">
+    img
+    {
+        image-rendering: auto;
+image-rendering: crisp-edges;
+image-rendering: pixelated;
+    }
+</style>
+
 <header>
     <nav>
         <a class="bars" href="javascript:void(0);" id="slidebarLink"><i class="fa fa-bars"></i></a>
         <a class="logo-img" href="./">
-            <img src="https://www.tatasky.com/assets/images/tata-sky-logo.png" alt="Logo" title="Logo" class="img-fluid" />
+            <img src="<?php echo base_url('assets/img/jetway.jpeg'); ?>" alt="Logo" title="Logo" class="img-fluid" width=100 height=50 />
         </a>
         <div class="nav-item">
             <ul class="nav-ul nav-left">
                 <li class=" ">
                     <a class="active nav-link" href="./">Home</a>
                 </li>
-                <li>
+               <!--  <li>
                     <a class=" nav-link" href="./">Wach</a>
-                </li>
+                </li> -->
             </ul>
         </div>
         <div class="nav-right">
             <ul class="nav-right1">
-                <li class="btn">
+                <!-- <li class="btn">
                     <a class="btn-link" href="">Recharj</a>
-                </li>
+                </li> -->
                 <li class="btn">
-                    <a class="btn-link" href="">Recharj</a>
+                    <a class="btn-link" href="<?php echo base_url('index.php/Recharge_controller/login') ?>">Recharge</a>
                 </li>
                 <li class="iconlogin">
                     <a href=""><i class="fa fa-user-o"></i></a>
