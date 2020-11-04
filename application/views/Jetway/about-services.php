@@ -1,10 +1,10 @@
 <?php
-include('./inc/css.php');
-include('./inc/top.php');
-include('./inc/header.php'); ?>
+include('inc/css.php');
+include('inc/top.php');
+include('inc/header.php'); ?>
 <main id="about-services">
     <?php
-        include('./vision.php')
+        include('vision.php')
     ?>
     <!-- ======= Team Section ======= -->
     <!-- <section id="team" class="team">
@@ -81,5 +81,5 @@ include('./inc/header.php'); ?>
     <!-- End Team Section -->
 </main>
 <?php
-include('./inc/footer.php');
-include('./inc/js.php'); ?>
+include('inc/footer.php');
+include('inc/js.php'); ?>

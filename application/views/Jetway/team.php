@@ -6,7 +6,7 @@
          </div>
          <div class="row mb-5">
              <div class="col-lg-6">
-                 <img src="assets/img/team/team.jpg" class="img-thumbnail " style="height:15rem; width:35rem;" alt="">
+                 <img src="<?php echo base_url(); ?>assets/img/team/team.jpg" class="img-thumbnail " style="height:15rem; width:35rem;" alt="">
              </div>
              <div class="col-lg-6 pt-4 pt-lg-0 content">
                  <p>
@@ -17,7 +17,7 @@
          <div class="row">
              <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
                  <div class="member">
-                     <img src="assets/img/team/team-1.jpg" alt="">
+                     <img src="<?php echo base_url(); ?>assets/img/team/team-1.jpg" alt="">
                      <h4>Walter White</h4>
                      <span>Chief Executive Officer</span>
                      <p>
@@ -34,7 +34,7 @@
 
              <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
                  <div class="member">
-                     <img src="assets/img/team/team-2.jpg" alt="">
+                     <img src="<?php echo base_url(); ?>assets/img/team/team-2.jpg" alt="">
                      <h4>Sarah Jhinson</h4>
                      <span>Product Manager</span>
                      <p>
@@ -51,7 +51,7 @@
 
              <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
                  <div class="member">
-                     <img src="assets/img/team/team-3.jpg" alt="">
+                     <img src="<?php echo base_url(); ?>assets/img/team/team-3.jpg" alt="">
                      <h4>William Anderson</h4>
                      <span>CTO</span>
                      <p>

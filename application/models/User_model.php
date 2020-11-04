@@ -227,6 +227,25 @@
      }
 
 
+     public function userpackageplans()
+    {
+      $user_id=$this->session->userdata('user_id');
+      $this->db->where('id',$user_id);
+      $result = $this->db->get('users')->row_array();
+
+      $this->db->where('pincode',$result['pincode']);
+      $res = $this->db->get('package_details')->result_array();
+
+      // print_r($res);
+
+      return $res;
+    }
+
+
+
+
+
+
   }
 
  ?>

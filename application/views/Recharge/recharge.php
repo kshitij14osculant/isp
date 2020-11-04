@@ -1,6 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <style type="text/css" href="css/style.css">
+        <!-- <?php include'css/style.css'; ?> -->
+    </style>
+
+</head>
+<body>
+
+</body>
+</html>
+
+
 <?php
-include('./include/css.php');
-include('./include/header.php'); ?>
+include('include/css.php');
+include('include/header.php'); ?>
 <div class="back-button"><a href="#!"><i class="fa fa-arrow-left" title="Back"></i><span>Back</span></a></div>
 <div class="logo-margin-top">
     <div class="heading-md">
@@ -45,5 +60,5 @@ include('./include/header.php'); ?>
 
 <?php
 // include('./include/footer.php');
-include('./include/footerjs.php');
+include('include/footerjs.php');
 ?>

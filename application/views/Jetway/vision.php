@@ -21,7 +21,7 @@
                 </ul>
             </div>
             <div class="col-lg-6">
-                <img src="assets/img/vison/vison.jpg" class="img-thumbnail " style="height:30rem; width:35rem;" alt="">
+                <img src="<?php echo base_url(); ?>assets/img/vison/vison.jpg" class="img-thumbnail " style="height:30rem; width:35rem;" alt="">
             </div>
         </div>
 
@@ -30,7 +30,7 @@
         </div>
         <div class="row mb-5">
             <div class="col-lg-6">
-                <img src="assets/img/vison/hr.jpg" class="img-thumbnail " style="height:15rem; width:35rem;" alt="">
+                <img src="<?php echo base_url(); ?>assets/img/vison/hr.jpg" class="img-thumbnail " style="height:15rem; width:35rem;" alt="">
             </div>
             <div class="col-lg-6 pt-4 pt-lg-0 content">
                 <p>
@@ -53,7 +53,7 @@
                 </p>
             </div>
             <div class="col-lg-6 pt-4 pt-lg-0 content">
-                <img src="assets/img/vison/crm.jpg" class="img-thumbnail " style="height:15rem; width:35rem;" alt="">
+                <img src="<?php echo base_url(); ?>assets/img/vison/crm.jpg" class="img-thumbnail " style="height:15rem; width:35rem;" alt="">
             </div>
         </div>
 
@@ -62,7 +62,7 @@
         </div>
         <div class="row mb-5">
             <div class="col-lg-6">
-                <img src="assets/img/vison/isp.jpg" class="img-thumbnail " style="height:30rem; width:35rem;" alt="">
+                <img src="<?php echo base_url(); ?>assets/img/vison/isp.jpg" class="img-thumbnail " style="height:30rem; width:35rem;" alt="">
             </div>
             <div class="col-lg-6 pt-4 pt-lg-0 content">
                 <p>
@@ -81,7 +81,7 @@
                 </p>
             </div>
             <div class="col-lg-6 pt-4 pt-lg-0 content">
-                <img src="assets/img/vison/cctv.jpg" class="img-thumbnail " style="height:25rem; width:35rem;" alt="">
+                <img src="<?php echo base_url(); ?>assets/img/vison/cctv.jpg" class="img-thumbnail " style="height:25rem; width:35rem;" alt="">
             </div>
         </div>
 
@@ -90,7 +90,7 @@
         </div>
         <div class="row mb-5">
             <div class="col-lg-6">
-                <img src="assets/img/vison/intcom.jpg" class="img-thumbnail " style="height:25rem; width:35rem;" alt="">
+                <img src="<?php echo base_url(); ?>assets/img/vison/intcom.jpg" class="img-thumbnail " style="height:25rem; width:35rem;" alt="">
             </div>
             <div class="col-lg-6 pt-4 pt-lg-0 content">
                 <p>
@@ -124,7 +124,7 @@
                 </p>
             </div>
             <div class="col-lg-6 pt-4 pt-lg-0 content">
-                <img src="assets/img/vison/network.jpg" class="img-thumbnail " style="height:25rem; width:35rem;" alt="">
+                <img src="<?php echo base_url(); ?>assets/img/vison/network.jpg" class="img-thumbnail " style="height:25rem; width:35rem;" alt="">
             </div>
         </div>
 
@@ -133,7 +133,7 @@
         </div>
         <div class="row mb-5">
             <div class="col-lg-6">
-                <img src="assets/img/vison/webdesign.jpg" class="img-thumbnail " style="height:23rem; width:35rem;" alt="">
+                <img src="<?php echo base_url(); ?>assets/img/vison/webdesign.jpg" class="img-thumbnail " style="height:23rem; width:35rem;" alt="">
             </div>
             <div class="col-lg-6 pt-4 pt-lg-0 content">
                 <p>
@@ -162,7 +162,7 @@
                 </p>
             </div>
             <div class="col-lg-6 pt-4 pt-lg-0 content">
-                <img src="assets/img/vison/5g.jpg" class="img-thumbnail " style="height:28rem; width:35rem;" alt="">
+                <img src="<?php echo base_url(); ?>assets/img/vison/5g.jpg" class="img-thumbnail " style="height:28rem; width:35rem;" alt="">
             </div>
         </div>
 
@@ -171,7 +171,7 @@
         </div>
         <div class="row mb-5">
             <div class="col-lg-6">
-                <img src="assets/img/vison/rout.jpg" class="img-thumbnail " style="height:28rem; width:35rem;" alt="">
+                <img src="<?php echo base_url(); ?>assets/img/vison/rout.jpg" class="img-thumbnail " style="height:28rem; width:35rem;" alt="">
             </div>
             <div class="col-lg-6 pt-4 pt-lg-0 content">
                 <p>
@@ -190,7 +190,7 @@
                 </p>
             </div>
             <div class="col-lg-6 pt-4 pt-lg-0 content">
-                <img src="assets/img/vison/bts.jpg" class="img-thumbnail " style="height:40rem; width:35rem;" alt="">
+                <img src="<?php echo base_url(); ?>assets/img/vison/bts.jpg" class="img-thumbnail " style="height:40rem; width:35rem;" alt="">
             </div>
         </div>
 
@@ -199,7 +199,7 @@
         </div>
         <div class="row mb-5">
             <div class="col-lg-6">
-                <img src="assets/img/vison/networktest.jpg" class="img-thumbnail " style="height:19rem; width:35rem;" alt="">
+                <img src="<?php echo base_url(); ?>assets/img/vison/networktest.jpg" class="img-thumbnail " style="height:19rem; width:35rem;" alt="">
             </div>
             <div class="col-lg-6 pt-4 pt-lg-0 content">
                 <p>
@@ -224,7 +224,7 @@
         </div>
         <div class="row mb-5">
             <div class="col-lg-12">
-                <img src="assets/img/vison/bdf.png" class="img-thumbnail " style="height:35rem; width:100%  ;" alt="">
+                <img src="<?php echo base_url(); ?>assets/img/vison/bdf.png" class="img-thumbnail " style="height:35rem; width:100%  ;" alt="">
             </div>
         </div>
     </div>

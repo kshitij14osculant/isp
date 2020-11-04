@@ -19,12 +19,13 @@ class Recharge_controller extends CI_Controller {
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
 
-  // function __construct(){
-  //   parent::__construct();
-  //   if($this->session->userdata('logged_in') !== TRUE){
-  //     $this->load->view('login.php');
-  //   }
-  // }
+  function __construct(){
+    parent::__construct();
+    // if($this->session->userdata('logged_in') !== TRUE){
+    //   $this->load->view('login.php');
+    // }
+     $this->load->model('User_model');
+  }
 
 
 	public function index()
@@ -68,7 +69,14 @@ class Recharge_controller extends CI_Controller {
 
   public function myacc()
   {
-    $this->load->view('Recharge/myacc');
+    $data['userpackage'] = $this->User_model->userpackageplans();
+    $this->load->view('Recharge/myacc',$data);
+  }
+
+
+  public function recharge()
+  {
+    $this->load->view('Recharge/recharge');
   }
 
   function logout(){

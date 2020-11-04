@@ -5,6 +5,7 @@
     <style type="text/css">
         <?php include'css/style.css'; ?>
     </style>
+
 </head>
 <body>
 
@@ -16,6 +17,10 @@
 include('include/css.php');
 include('include/header.php'); ?>
 <!-- <div class="back-button"><a href="#!"><i class="fa fa-arrow-left" title="Back"></i><span>Back</span></a></div> -->
+
+
+
+
 <div class="logo-margin-top">
     <div class="heading-md">
         <h1 class="heading1 gradient"><?php echo $this->session->userdata('username'); ?></h1>
@@ -37,39 +42,42 @@ include('include/header.php'); ?>
             <strong> Nov 9, 20</strong>
         </div>
     </div>
-    <ul class="home">
-        <li class="home-btn">
-            <a href="./login" class="myaccbtn">
-               <i class="fa fa-cricket "></i>Cricket Chennels
-            </a>
-        </li>
-        <li class="home-btn">
-            <a href="./recharj" class="myaccbtn">
-                Recharge
-            </a>
-        </li>
-        <li class="home-btn">
-            <a href="./login" class="myaccbtn">
-                Manage Pack
-            </a>
-        </li>
-        <li class="home-btn">
-            <a href="./login" class="myaccbtn">
-                Made For You
-            </a>
-        </li>
-        <li class="home-btn">
-            <a href="./login" class="myaccbtn">
-                Explore More
-            </a>
-        </li>
-        <li class="home-btn">
-            <a href="./login" class="myaccbtn">
-                Get Help
-            </a>
-        </li>
-    </ul>
+   
+
+     <div style="display: flex;flex-wrap: wrap;justify-content:center; padding: 2%">
+
+        <?php foreach ($userpackage as $key) {?>
+             <div style="margin: 1%">
+                <?php if($key['file_path'])
+                {
+                    ?>
+                 <img src="<?php echo $key['file_path'];?>" width=200 height=200>
+             <?php }else{?>
+                 <img src="<?php echo base_url('assets/images/image_bg.png');?>" width=200 height=200>
+             <?php } ?>
+                 <div>
+                     <h3><?php echo $key['package_name'];?></h3>
+                     <p><?php echo $key['package_price'];?></p>
+                     <p><?php echo $key['speed'];?></p>
+                     <p><?php echo $key['month'];?></p>
+                     <p><?php echo $key['data_per_day'];?></p>
+                     <p><?php echo $key['installation_charge'];?></p>
+                 </div>
+                 <button class="" style="width:100%;" onclick="addclick()" >Add</button>
+             </div>
+        <?php } ;?>
+         
+     </div>
 </div>
+
+
+<script type="text/javascript">
+    function addclick(){
+ window.location = "<?php echo base_url().'index.php/Recharge_controller/recharge';?>";
+    }
+</script>
+
+<!-- <?php  print_r($userpackage);?> -->
 
 <?php
 include('include/footer.php');
