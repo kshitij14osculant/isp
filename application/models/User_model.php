@@ -243,7 +243,32 @@
 
 
 
+    public function rechargeinfo()
+    {
+      $arr1=$this->input->post();
+          // print_r($arr1);
+            
+          $arr = Array(
+                 'subscriber_id'  => $arr1['subscriber_id'],
+                 'amount'         => $arr1['amount'],
+                 'username'      => $this->session->userdata('username'),
+                 'created_at'     => date('Y-m-d'),
+                 'user_id'        => $this->session->userdata('user_id'),
+                
+          );
+            $this->db->insert('recharge_info',$arr);
+    }
 
+
+     public function paymentmethoddetails()
+    {
+      
+      $res = $this->db->get('payment_methodinfo')->result_array();
+
+      // print_r($res);
+
+      return $res;
+    }
 
 
   }

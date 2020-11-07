@@ -84,5 +84,19 @@ class Recharge_controller extends CI_Controller {
       $this->load->view('login.php');
   }
 
+
+  public function paymentmethod()
+  {
+    $data['paymentmethoddetails'] = $this->User_model->paymentmethoddetails();
+    $this->load->view('Recharge/paymentmethod',$data);
+  }
+
+ public function rechargeinfo()
+ {
+   $this->load->model('User_model');
+   $this->User_model->rechargeinfo();
+   print_r(json_encode(1));
+ }
+
 }
 ?>

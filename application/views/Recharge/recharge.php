@@ -24,13 +24,13 @@ include('include/header.php'); ?>
     </div>
 </div>
 <div class="center">
-    <form action="./rechl" method="post">
+    <form id="formId" method="post">
         <div class="body-container">
             <div class="save-user-details">
                 <div class="form-group">
                     <div class="form-group phone-field">
                         <label class="sel active">Subscriber ID / Registered Mobile Number </label>
-                        <input class="form-control" type="tel" placeholder="" maxlength="10" tabindex="0" value="">
+                        <input class="form-control" type="tel" id="Inputsubscriber_id" placeholder="" maxlength="10" tabindex="0" value="">
                     </div>
                 </div>
             </div>
@@ -38,7 +38,7 @@ include('include/header.php'); ?>
                 <div class="form-group">
                     <div class="form-group phone-field">
                         <label class="sel active">Amount</label>
-                        <input class="form-control" type="tel" placeholder="" maxlength="10" tabindex="0" value="">
+                        <input class="form-control" type="tel" id="amount" placeholder="" maxlength="10" tabindex="0" value="">
                     </div>
                 </div>
             </div>
@@ -57,6 +57,48 @@ include('include/header.php'); ?>
         As per Kerala Finance Bill 2019, 1% Cess would be applicable on Tata Sky recharges wef 1st Aug'19 for subscribers registered in Kerala
     </p>
 </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+        //Ajax 
+var request;
+$("#formId").submit(function(event){
+    // Prevent default posting of form - put here to work in case of errors
+    event.preventDefault();
+
+    alert('check');
+
+
+    // var data = new FormData(this);
+    var jsonobj = {
+        'amount':$('#amount').val(),
+        'subscriber_id':$('#Inputsubscriber_id').val(),
+    }
+
+    // alert(jsonobj.email);
+    // alert(jsonobj.subscriber_id);
+
+    $.ajax({
+        url:"<?php echo  base_url().'index.php/Recharge_controller/rechargeinfo';?>",
+        type: "post",
+        dataType: "json",
+        data: jsonobj,
+
+        success:function(data)
+        {
+          
+           window.location = "<?php echo base_url('index.php/Recharge_controller/paymentmethod'); ?>";
+
+        }
+    });
+
+ 
+
+
+
+
+});
+</script>
 
 <?php
 // include('./include/footer.php');

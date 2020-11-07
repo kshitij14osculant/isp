@@ -73,7 +73,7 @@ $("#formId").click(function(event){
     // Prevent default posting of form - put here to work in case of errors
     event.preventDefault();
 
-    alert('check');
+    // alert('check');
 
 
     // var data = new FormData(this);
@@ -82,8 +82,8 @@ $("#formId").click(function(event){
         'subscriber_id':$('#Inputsubscriber_id').val(),
     }
 
-    alert(jsonobj.email);
-    alert(jsonobj.subscriber_id);
+    // alert(jsonobj.email);
+    // alert(jsonobj.subscriber_id);
 
     $.ajax({
         url:"<?php echo  base_url().'index.php/Welcome/isvalid';?>",
