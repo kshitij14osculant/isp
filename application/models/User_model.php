@@ -274,6 +274,27 @@
     }
 
 
+    public function registeration()
+    {
+      $arr1=$this->input->post();
+          // print_r($arr1);
+            
+          $arr = Array(
+                 'subscriber_id'  => $arr1['subscriber_id'],
+                 'fullname'       => $arr1['fullname'],
+                 'email'          => $arr1['email'],
+                 'mobile'         => $arr1['mobile'],
+                 'pincode'        => $arr1['pincode'],
+                 'user_level'     => '1',
+                 'user_category'  => 'user',
+                 'created_at'     => date('Y-m-d'),
+          );
+            $this->db->insert('users',$arr);
+
+            
+    }
+
+
   }
 
  ?>

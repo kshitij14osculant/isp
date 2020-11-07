@@ -98,5 +98,12 @@ class Recharge_controller extends CI_Controller {
    print_r(json_encode(1));
  }
 
+ public function registeration()
+ {
+   $this->load->model('User_model');
+   $this->User_model->registeration();
+   print_r(json_encode(1));
+ }
+
 }
 ?>
