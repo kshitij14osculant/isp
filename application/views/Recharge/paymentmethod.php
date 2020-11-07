@@ -33,7 +33,7 @@ include('include/header.php'); ?>
             <div style="display: flex;flex-wrap: wrap;justify-content:center; padding: 2%">
 
         <?php foreach ($paymentmethoddetails as $key) {?>
-             <div style="margin: 1%">
+             <div style="margin:0 auto;max-width:300px;box-shadow: 3px 3px 3px 3px rgba(0,0,0,0.3);text-align: left;padding: 2%;box-sizing: border-box;">
                 <?php if($key['file_path'])
                 {
                     ?>
@@ -42,9 +42,9 @@ include('include/header.php'); ?>
                  <img src="<?php echo base_url('assets/images/image_bg.png');?>" width=200 height=200>
              <?php } ?>
                  <div>
-                     <h3><?php echo $key['payment_method'];?></h3>
-                     <p><?php echo $key['payment_no'];?></p>
-                     <p><?php echo $key['user_name'];?></p>
+                     <h3 style="color:white;padding:1%;background: -webkit-linear-gradient(330deg,#ff9000 0,red 50%,#0a00b2 100%);"><?php echo $key['payment_method'];?></h3>
+                     <p><span>Payment no: &nbsp;</span><?php echo $key['payment_no'];?></p>
+                     <p><span>User: &nbsp;</span><?php echo $key['user_name'];?></p>
                      
                  </div>
                  <!-- <button class="" style="width:100%;" onclick="addclick()" >Add</button> -->
