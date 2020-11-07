@@ -4,6 +4,11 @@
     <title></title>
     <style type="text/css">
         <?php include'css/style.css'; ?>
+
+        .content p
+        {
+            margin:2%;
+        }
     </style>
 
 </head>
@@ -47,23 +52,23 @@ include('include/header.php'); ?>
      <div style="display: flex;flex-wrap: wrap;justify-content:center; padding: 2%">
 
         <?php foreach ($userpackage as $key) {?>
-             <div style="margin: 1%">
+             <div style="margin:0 auto;max-width:300px;box-shadow: 3px 3px 3px 3px rgba(0,0,0,0.3);text-align: left;padding: 2%;box-sizing: border-box;">
                 <?php if($key['file_path'])
                 {
                     ?>
-                 <img src="<?php echo $key['file_path'];?>" width=200 height=200>
+                 <img src="<?php echo $key['file_path'];?>" style="width: 250px;height: 200px;">
              <?php }else{?>
-                 <img src="<?php echo base_url('assets/images/image_bg.png');?>" width=200 height=200>
+                 <img src="<?php echo base_url('assets/images/image_bg.png');?>" style="width: 250px;height: 200px;">
              <?php } ?>
-                 <div>
-                     <h3><?php echo $key['package_name'];?></h3>
-                     <p><?php echo $key['package_price'];?></p>
-                     <p><?php echo $key['speed'];?></p>
-                     <p><?php echo $key['month'];?></p>
-                     <p><?php echo $key['data_per_day'];?></p>
-                     <p><?php echo $key['installation_charge'];?></p>
+                 <div class="content">
+                     <h3 style="color:white;padding:1%;background: -webkit-linear-gradient(330deg,#ff9000 0,red 50%,#0a00b2 100%);"><span></span><?php echo $key['package_name'];?></h3>
+                     <p><span>Price: &nbsp;</span><?php echo $key['package_price'];?></p>
+                     <p><span>Speed: &nbsp;</span><?php echo $key['speed'];?></p>
+                     <p><span>Month: &nbsp;</span><?php echo $key['month'];?></p>
+                     <p><span>Data per day: &nbsp;</span><?php echo $key['data_per_day'];?></p>
+                     <p><span>Installation: &nbsp;</span><?php echo $key['installation_charge'];?></p>
                  </div>
-                 <button class="" style="width:100%;" onclick="addclick()" >Add</button>
+                 <button class="" style="padding: 6px 12px;" onclick="addclick()" >Add pack</button>
              </div>
         <?php } ;?>
          
