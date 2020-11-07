@@ -55,7 +55,7 @@ include('include/header.php'); ?>
 
 
             <div style="margin-top: 30px;">
-                <a class="home-btn-link"  href="">Pay Now</a>
+                <a class="home-btn-link"  href="<?php echo base_url().'index.php/Recharge_controller/recharge';?>">Pay Now</a>
             </div>
         </div>
     </div>

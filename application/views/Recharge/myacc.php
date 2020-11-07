@@ -33,8 +33,8 @@ include('include/header.php'); ?>
     </div>
 </div>
 <div class="center">
-    <div>
-        <h2 class="headdinglog">Subscriber Id :</h2><strong>1274256682</strong><br>
+    <!-- <div>
+        <h2 class="headdinglog">Subscriber Id :</h2><?php echo $this->session->userdata('subscriber_id'); ?><br>
         <h2 class="headdinglog">Monthly Recharge Amount:</h2><strong> ₹ 344</strong>
     </div>
     <div class="bel">
@@ -46,7 +46,7 @@ include('include/header.php'); ?>
         <h2 class="heading2 ">Recharge due on</h2>
             <strong> Nov 9, 20</strong>
         </div>
-    </div>
+    </div> -->
    
 
      <div style="display: flex;flex-wrap: wrap;justify-content:center; padding: 2%">
@@ -78,7 +78,8 @@ include('include/header.php'); ?>
 
 <script type="text/javascript">
     function addclick(){
- window.location = "<?php echo base_url().'index.php/Recharge_controller/recharge';?>";
+ // window.location = "<?php echo base_url().'index.php/Recharge_controller/recharge';?>";
+window.location = "<?php echo base_url('index.php/Recharge_controller/paymentmethod'); ?>"; 
     }
 </script>
 
