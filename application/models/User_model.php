@@ -251,12 +251,15 @@
           $arr = Array(
                  'subscriber_id'  => $arr1['subscriber_id'],
                  'amount'         => $arr1['amount'],
-                 'username'      => $this->session->userdata('username'),
+                 'username'       => $this->session->userdata('username'),
                  'created_at'     => date('Y-m-d'),
                  'user_id'        => $this->session->userdata('user_id'),
+                 'transaction_id' => $arr1['transaction_id'],
                 
           );
             $this->db->insert('recharge_info',$arr);
+
+            
     }
 
 

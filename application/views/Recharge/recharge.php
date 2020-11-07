@@ -42,6 +42,28 @@ include('include/header.php'); ?>
                     </div>
                 </div>
             </div>
+
+            <div class="save-user-details">
+                <div class="form-group">
+                    <div class="form-group phone-field">
+                        <label class="sel active">Transation id</label>
+                        <input class="form-control" type="tel" id="transaction_id" placeholder="" maxlength="10" tabindex="0" value="">
+                    </div>
+                </div>
+            </div>
+
+           <!--  <div class="save-user-details">
+                <div class="form-group">
+                    <div class="form-group phone-field">
+                        <label class="sel active">Transation details</label>
+                        <input type="file"  name="input_file" id="input_file">
+                    </div>
+                </div>
+            </div> -->
+
+            
+
+
         </div>
         <div class="footer-contr text-center">
             <div class="footer-contr btn-contr text-center">
@@ -73,6 +95,8 @@ $("#formId").submit(function(event){
     var jsonobj = {
         'amount':$('#amount').val(),
         'subscriber_id':$('#Inputsubscriber_id').val(),
+        'transaction_id':$('#transaction_id').val(),
+        // 'input_file':$('#input_file').val(),
     }
 
     // alert(jsonobj.email);
@@ -87,7 +111,7 @@ $("#formId").submit(function(event){
         success:function(data)
         {
           
-           window.location = "<?php echo base_url('index.php/Recharge_controller/paymentmethod'); ?>";
+           window.location = "<?php echo base_url('index.php/Recharge_controller/myacc'); ?>";
 
         }
     });

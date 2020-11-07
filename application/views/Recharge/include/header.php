@@ -32,7 +32,12 @@ image-rendering: pixelated;
                     <a class="btn-link" href="<?php echo base_url('index.php/Recharge_controller/login') ?>">Recharge</a>
                 </li>
                 <li class="iconlogin">
-                    <a href=""><i class="fa fa-user-o"></i></a>
+                    <!-- <a href=""><i class="fa fa-user-o"></i></a> -->
+                    <?php if($this->session->userdata('user_id'))
+                    { ?>
+
+             <a style="color:white;padding: 0;font-size: 15px;"class="btn-link " href="<?php echo base_url('index.php/Recharge_controller/logout') ?>">Logout</a>
+                    <?php }?>
                 </li>
             </ul>
         </div>
