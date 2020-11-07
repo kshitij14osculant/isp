@@ -18,7 +18,7 @@
                 </a>
             </li>
             <li class="home-btn">
-                <a href="<?php echo base_url('index.php/Recharge_controller/newcust'); ?>" class="home-btn-link">
+                <a href="<?php echo base_url('index.php/Recharge_controller/register'); ?>" class="home-btn-link">
                     Not a Jetway Customer
                 </a>
             </li>
