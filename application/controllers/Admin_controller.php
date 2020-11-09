@@ -27,6 +27,12 @@ class Admin_controller extends CI_Controller {
     // }
      $this->load->model('User_model');
   }
+
+
+  public function index()
+  {
+    $this->load->view('Admin/index.php');
+  }
 	 
 
    public function plans()
