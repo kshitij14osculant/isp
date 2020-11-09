@@ -130,6 +130,15 @@
         </a>
       </li>
 
+
+      <li class="nav-item">
+        <a class="nav-link" href="<?php echo base_url('index.php/Admin_controller/recharge_info');?>">
+          <i class="fa fa-fw fa-chart-area"></i>
+           <!-- <span>Charts</span> -->
+           <span>Recharge info</span>
+        </a>
+      </li>
+
       
 
 

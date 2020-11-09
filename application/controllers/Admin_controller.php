@@ -126,6 +126,45 @@ class Admin_controller extends CI_Controller {
     $this->User_model->deleteuserinfo();
   }
 
+  public function recharge_info()
+   {
+    
+      $data['getrechargeinfo'] = $this->User_model->getrechargeinfo();
+      $this->load->view('Admin/recharge_info',$data);
+   }
+
+
+
+   public function update_rechargeservice()
+  { 
+
+      $this->load->model('User_model');
+      $this->User_model->update_rechargeservice();
+  }
+
+
+  public function packagemodalinfo()
+  {
+    $this->load->model('User_model');
+    $this->User_model->packagemodalinfo();
+  }
+
+  public function update_packageinfo()
+  { 
+
+      $this->load->model('User_model');
+      $this->User_model->update_packageinfo();
+  }
+
+
+  public function deletepackageinfo()
+  {
+    # code...
+    $this->load->model('User_model');
+    $this->User_model->deletepackageinfo();
+  } 
+
+
 
 
 }

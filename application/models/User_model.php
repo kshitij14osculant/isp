@@ -355,6 +355,92 @@
      }
 
 
+
+     public function getrechargeinfo()
+    {
+      
+      $res = $this->db->get('recharge_info')->result_array();
+
+      // print_r($res);
+
+      return $res;
+    }
+
+
+
+    public function update_rechargeservice()
+     {
+          $arr1=$this->input->post();
+          // print_r($arr1);
+            
+          $arr = Array(
+                 'status' => $arr1['status'],
+                
+          );
+
+            $this->db->where('id',$arr1['rechargeuserid']);
+            $this->db->update('recharge_info',$arr);
+
+       echo "successfully updated";       
+
+    }
+
+
+
+
+    public function packagemodalinfo()
+    {
+      $user_id=$this->session->userdata('user_id');
+      $this->db->where('user_id',$user_id);
+
+      $this->db->where('id',$this->input->post('val'));
+      $res = $this->db->get('package_details')->row_array();
+
+      print_r(json_encode($res));
+      // echo $res;
+
+      // return json_encode($res);
+    }
+
+
+
+
+    public function update_packageinfo()
+     {
+          $arr1=$this->input->post();
+          // print_r($arr1);
+            
+          $arr = Array(
+                 'package_name'        => $arr1['package_name'],
+                 'package_price'       => $arr1['package_price'],
+                 'speed'               => $arr1['speed'],
+                 'month'               => $arr1['month'],
+                 'data_per_day'        => $arr1['data_per_day'],
+                 'installation_charge' => $arr1['installation_charge'],
+                 'pincode'             => $arr1['pincode'],
+                
+          );
+
+            $this->db->where('id',$arr1['packageid']);
+            $this->db->update('package_details',$arr);
+
+       echo "successfully updated";       
+
+    }
+
+
+    public function deletepackageinfo()
+     {
+       # code...
+      $this->db->where('id',$this->input->post('val'));
+      $this->db->delete('package_details');
+
+      echo "successfully deleted";
+     }
+
+
+
+
   }
 
  ?>

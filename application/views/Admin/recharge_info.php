@@ -43,7 +43,7 @@
   <!-- Page Wrapper -->
   <div id="wrapper">
 
-    <?php include 'common/header/header.php'; ?>
+   <?php include 'common/header/header.php'; ?>
 
     <!-- Content Wrapper -->
     <div id="content-wrapper" class="d-flex flex-column">
@@ -246,36 +246,33 @@
               <table class="table table-borderless">
     <thead>
       <tr>
-        <th>Package name</th>
-        <th>Package price</th>
-        <th>Speed</th>
-        <th>Month</th>
-        <th>Data per day</th>
-        <th>Pincode</th>
+        <th>Subscriber id</th>
+        <th>Amount</th>
+        <th>Name</th>
+        <th>User_id</th>
+        <th>Transaction id</th>
+        <th>Recharge Date</th>
+        <th>Status</th>
         <th>Action</th>
       </tr>
     </thead>
     <tbody>
 
-      <?php foreach ($package as $key) { ?>
-
+      <?php foreach ($getrechargeinfo as $key) { ?>
       <tr>
-        <td><?php echo $key['package_name']; ?></td>
-        <td><?php echo $key['package_price']; ?></td>
-        <td><?php echo $key['speed']; ?></td>
-        <td><?php echo $key['month']; ?></td>
-        <td><?php echo $key['data_per_day']; ?></td>
-        <td><?php echo $key['pincode']; ?></td>
-        <td>
-          <button class="btn btn-success" data-toggle="modal" data-target="#exampleModalLong" id="clickid" data-payment-id ="<?php echo $key['id']; ?>" onclick="editclick(this)">Update</button>
-          &nbsp;
+        <td><?php echo $key['subscriber_id']; ?></td>
+        <td><?php echo $key['amount']; ?></td>
+        <td><?php echo $key['username']; ?></td>
+        <td><?php echo $key['user_id']; ?></td>
+        <td><?php echo $key['transaction_id']; ?></td>
 
-          
-          <button class="btn btn-danger" data-toggle="modal" data-target="#deletemodalid" data-payment-id ="<?php echo $key['id']; ?>" id="deleteclickid" onclick="deleteclick(this)">Delete</button>
+        <td><?php echo $key['created_at']; ?></td>
+        <td><?php echo $key['status']; ?></td>
+        <td><button class="btn btn-success" data-toggle="modal" data-target="#exampleModalLong" id="clickid" data-payment-id ="<?php echo $key['id']; ?>" onclick="editclick(this)">Update</button> &nbsp;
+          <!-- <button class="btn btn-danger" data-toggle="modal" data-target="#deletemodalid" data-payment-id ="<?php echo $key['id']; ?>" id="deleteclickid" onclick="deleteclick(this)">Delete</button> -->
         </td>
 
       </tr>
-      
       <?php } ?>
       
     </tbody>
@@ -293,9 +290,9 @@
       <!-- End of Main Content -->
 
 
-      <!-- Modal -->
+      <!-- Modal for Edit-->
 <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-  <div class="modal-dialog" role="document">
+  <div class="modal-dialog modal-md" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLongTitle">Update</h5>
@@ -305,50 +302,30 @@
       </div>
       <div class="modal-body">
 
-       <div style=" margin: 10px;">
-        <h2 style="text-align: center"></h2>
-        <h3 style="padding:2%;letter-spacing: 2px;font-weight: normal; margin-left: 10px;" id="nm"></h3>
-<form id="formId">
+
+                      
+                      <div style=" margin: 10px;">
+                        <h2 style="text-align: center">Sarvice</h2>
+                      <h3 style="padding:2%;letter-spacing: 2px;font-weight: normal; margin-left: 10px;" id="nm"></h3>
+
+  <form id="formId">
   <div class="form-group">
-    <label for="package_name">Package name</label>
-    <input type="text" class="form-control" id="package_name" name="package_name">
+    <label for="status">Status</label>
+    <input type="text" class="form-control" id="status" name="status">
+    <small class="form-text text-muted">Status of received plans</small>
+  </div>
   
-  </div>
-  <div class="form-group">
-    <label for="package_price">Package price</label>
-    <input type="text" class="form-control" id="package_price" name="package_price">
-  </div>
-
-  <div class="form-group">
-    <label for="speed">speed</label>
-    <input type="text" class="form-control" id="speed" name="speed">
-  </div>
-
-  
-  <div class="form-group">
-    <label for="month">month</label>
-    <input type="text" class="form-control" id="month" name="month">
+ <!-- <div class="form-group">
+    <label for="payment_no">Payment no.</label>
+    <input type="text" class="form-control" id="payment_no" name="payment_no">
   </div>
 
   <div class="form-group">
-    <label for="data_per_day">Data per day</label>
-    <input type="text" class="form-control" id="data_per_day" name="data_per_day">
+    <label for="user_name">User name</label>
+    <input type="text" class="form-control" id="user_name" name="user_name">
   </div>
 
-
-  <div class="form-group">
-    <label for="installation_charge">installation_charge</label>
-    <input type="text" class="form-control" id="installation_charge" name="installation_charge">
-  </div>
-
-
-  <div class="form-group">
-    <label for="pincode">pincode</label>
-    <input type="text" class="form-control" id="pincode" name="pincode">
-  </div>
-
-
-  <!-- <div class="form-group" style="margin: 20px; width: 200px;">
+  <div class="form-group" style="margin: 20px; width: 200px;">
     <div >
        <label  for="customFile">Upload Image</label>
 
@@ -359,12 +336,13 @@
 
 <div class="form-group">
     <!-- <label for="user_name">User name</label> -->
-    <input type="hidden" class="form-control" id="packageid" name="packageid">
+    <input type="hidden" class="form-control" id="rechargeuserid" name="rechargeuserid">
   </div>
 
   
   <button type="submit" class="btn btn-primary">Update</button>
 </form>
+                      
 
                       </div>
  
@@ -373,9 +351,11 @@
        </div>
 
      </div>
-<!-- End Edit Modal -->
 
- <!-- Modal for Delete-->
+    <!-- End Modal for edit -->
+
+
+     <!-- Modal for Delete-->
 <div class="modal fade" id="deletemodalid" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -397,7 +377,6 @@
      </div>
 
     <!-- End Modal for Delete -->
-
 
 
       <!-- Footer -->
@@ -443,7 +422,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
   <script type="text/javascript">
-    <?php   include 'js/plans.js'; ?>
+    <?php   include 'js/recharge_info.js'; ?>
  
   </script>
  
