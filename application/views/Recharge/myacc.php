@@ -51,7 +51,11 @@ include('include/header.php'); ?>
 
      <div style="display: flex;flex-wrap: wrap;justify-content:center; padding: 2%">
 
-        <?php foreach ($userpackage as $key) {?>
+        <?php 
+
+        if($userpackage){
+
+        foreach ($userpackage as $key) {?>
              <div style="margin:0 auto;max-width:300px;box-shadow: 3px 3px 3px 3px rgba(0,0,0,0.3);text-align: left;padding: 2%;box-sizing: border-box;">
                 <?php if($key['file_path'])
                 {
@@ -70,7 +74,10 @@ include('include/header.php'); ?>
                  </div>
                  <button class="" style="padding: 6px 12px;" onclick="addclick()" >Add pack</button>
              </div>
-        <?php } ;?>
+        <?php 
+           } 
+             }
+           ;?>
          
      </div>
 </div>

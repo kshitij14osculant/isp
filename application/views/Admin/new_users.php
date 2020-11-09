@@ -243,32 +243,44 @@
             <!-- <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fa fa-download fa-sm text-white-50"></i> Generate Report</a> -->
             <div class="table-responsive" style="background: white;">
              
-              <table class="table table-borderless">
+             <table class="table table-borderless">
     <thead>
       <tr>
-        <th>Firstname</th>
-        <th>Lastname</th>
+        <th>Name</th>
         <th>Email</th>
+        <th>Mobile</th>
+        <th>Pincode</th>
+        <th>Subscriber_id</th>
+        <th>Action</th>
       </tr>
     </thead>
     <tbody>
+
+      <?php foreach ($users as $key) { ?>
+
       <tr>
-        <td>John</td>
-        <td>Doe</td>
-        <td>john@example.com</td>
+        <td><?php echo $key['fullname']; ?></td>
+        <td><?php echo $key['email']; ?></td>
+        <td><?php echo $key['mobile']; ?></td>
+        <td><?php echo $key['pincode']; ?></td>
+        <td><?php echo $key['subscriber_id']; ?></td>
+        <td>
+          <button class="btn btn-success" data-toggle="modal" data-target="#exampleModalLong" id="clickid" data-payment-id ="<?php echo $key['id']; ?>" onclick="editclick(this)">Update</button>
+          &nbsp;
+
+          
+          <button class="btn btn-danger" data-toggle="modal" data-target="#deletemodalid" data-payment-id ="<?php echo $key['id']; ?>" id="deleteclickid" onclick="deleteclick(this)">Delete</button>
+        </td>
+
       </tr>
-      <tr>
-        <td>Mary</td>
-        <td>Moe</td>
-        <td>mary@example.com</td>
-      </tr>
-      <tr>
-        <td>July</td>
-        <td>Dooley</td>
-        <td>july@example.com</td>
-      </tr>
+      
+      <?php } ?>
+      
     </tbody>
   </table>
+
+
+
 
             </div>
 
@@ -280,6 +292,99 @@
 
       </div>
       <!-- End of Main Content -->
+
+           <!-- Modal -->
+<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Update</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+       <div style=" margin: 10px;">
+        <h2 style="text-align: center"></h2>
+        <h3 style="padding:2%;letter-spacing: 2px;font-weight: normal; margin-left: 10px;" id="nm"></h3>
+<form id="formId">
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input type="text" class="form-control" id="name" name="name">
+   <!--  <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+  </div>
+  <div class="form-group">
+    <label for="email">email</label>
+    <input type="text" class="form-control" id="email" name="email">
+  </div>
+
+  <div class="form-group">
+    <label for="Mobile">Mobile</label>
+    <input type="text" class="form-control" id="mobile" name="mobile">
+  </div>
+
+  <div class="form-group">
+    <label for="pincode">Pincode</label>
+    <input type="text" class="form-control" id="pincode" name="pincode">
+  </div>
+
+  <div class="form-group">
+    <label for="subscriber_id">Subscriber Id</label>
+    <input type="text" class="form-control" id="subscriber_id" name="subscriber_id">
+  </div>
+
+  <!-- <div class="form-group" style="margin: 20px; width: 200px;">
+    <div >
+       <label  for="customFile">Upload Image</label>
+
+       <img src="" id="imageid" style="width: 100px;height: 100px;border-radius: 50%;padding:1%;">
+       <input type="file"  name="input_file" id="input_file">
+    </div>
+</div> -->
+
+<div class="form-group">
+    <!-- <label for="user_name">User name</label> -->
+    <input type="hidden" class="form-control" id="userid" name="userid">
+  </div>
+
+  
+  <button type="submit" class="btn btn-primary">Update</button>
+</form>
+
+                      </div>
+ 
+           </div>
+         </div>
+       </div>
+
+     </div>
+<!-- End Edit Modal -->
+
+<!-- Modal for Delete-->
+<div class="modal fade" id="deletemodalid" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Ready to Delete?</h5>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">Select "ok" below if you are ready to delete your current payment method.</div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+          <!-- <a class="btn btn-danger text-white" >Ok</a> -->
+          <button class="btn btn-danger text-white" type="button" id="deleteid" data-pay-id=''onclick="deleteokclick(this)">ok</button>
+        </div>
+      </div>
+       </div>
+
+     </div>
+
+    <!-- End Modal for Delete -->
+
+
 
       <!-- Footer -->
       <footer class="sticky-footer bg-white">
@@ -321,7 +426,15 @@
     </div>
   </div>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <script type="text/javascript">
+    <?php   include 'js/new_users.js'; ?>
+ 
+  </script>
+
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script type="text/javascript">
     <?php
       include 'vendor/jquery/jquery.min.js';
@@ -333,7 +446,7 @@
       include 'js/demo/chart-pie-demo.js';
       include 'js/sb-admin-2.js';
     ?>
- </script>
+ </script> -->
 
   <!-- Bootstrap core JavaScript-->
  <!--  <script src="vendor/jquery/jquery.min.js"></script>

@@ -44,7 +44,8 @@ class Admin_controller extends CI_Controller {
 
    public function new_users()
    {
-     $this->load->view('Admin/new_users.php');
+     $data['users'] = $this->User_model->getnewuserinfo();
+     $this->load->view('Admin/new_users.php',$data);
    }
 
 
@@ -98,7 +99,26 @@ class Admin_controller extends CI_Controller {
   } 
 
 
+  public function userinfo()
+  {
+    $this->load->model('User_model');
+    $this->User_model->userinfo();
+  }
 
+
+  public function update_userinfo()
+  { 
+
+      $this->load->model('User_model');
+      $this->User_model->update_userinfo();
+  }
+
+   public function deleteuserinfo()
+  {
+    # code...
+    $this->load->model('User_model');
+    $this->User_model->deleteuserinfo();
+  }
 
 
 

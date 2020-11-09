@@ -39,6 +39,7 @@ class Welcome extends CI_Controller {
 
 	}
 
+
   public function about_services()
   {
      $this->load->view('Jetway/about-services');
@@ -138,6 +139,8 @@ class Welcome extends CI_Controller {
               else if($level === '1' && $category === 'user'){
                
                    print_r(json_encode(1));
+                   $data['userpackage'] = $this->User_model->userpackageplans();
+                   $this->load->view('Recharge/myacc.php',$data);
 
               }
               else{

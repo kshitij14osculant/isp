@@ -295,6 +295,66 @@
     }
 
 
+
+    public function getnewuserinfo()
+    {
+      
+      $this->db->where('user_category','user');
+      $res = $this->db->get('users')->result_array();
+
+      // print_r($res);
+
+      return $res;
+    }
+
+
+    public function userinfo()
+    {
+    
+
+      $this->db->where('id',$this->input->post('val'));
+      $res = $this->db->get('users')->row_array();
+
+      print_r(json_encode($res));
+      // echo $res;
+
+      // return json_encode($res);
+    }
+
+
+    public function update_userinfo()
+     {
+          $arr1=$this->input->post();
+          // print_r($arr1);
+            
+          $arr = Array(
+                 'subscriber_id'  => $arr1['subscriber_id'],
+                 'fullname'       => $arr1['name'],
+                 'email'          => $arr1['email'],
+                 'mobile'         => $arr1['mobile'],
+                 'pincode'        => $arr1['pincode'],
+                
+          );
+
+            $this->db->where('id',$arr1['userid']);
+            $this->db->update('users',$arr);
+
+       echo "successfully updated";       
+
+    }
+
+
+
+    public function deleteuserinfo()
+     {
+       # code...
+      $this->db->where('id',$this->input->post('val'));
+      $this->db->delete('users');
+
+      echo "successfully deleted";
+     }
+
+
   }
 
  ?>
