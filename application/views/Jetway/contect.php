@@ -33,8 +33,8 @@
 
         <div class="row">
 
-            <div class="col-lg-6 ">
-            <iframe width="550" height="390" id="gmap_canvas" src="https://maps.google.com/maps?q=1%2FA%2C%20Kailash%20Commercial%20Complex%2C%20Shiv%20Mandir%20Road%2C%20Ambernath%20East%2C%20Ambernath%2C%20Maharashtra%20421501&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+            <div class="col-lg-6">
+            <iframe style="width: 100%;height:100%;" id="gmap_canvas" src="https://maps.google.com/maps?q=1%2FA%2C%20Kailash%20Commercial%20Complex%2C%20Shiv%20Mandir%20Road%2C%20Ambernath%20East%2C%20Ambernath%2C%20Maharashtra%20421501&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
             </div>
 
             <div class="col-lg-6">
