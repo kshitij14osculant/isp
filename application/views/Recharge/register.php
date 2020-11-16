@@ -118,8 +118,18 @@ $("#formId").submit(function(event){
 
         success:function(data)
         {
-          
-           window.location = "<?php echo base_url('index.php/Recharge_controller/login'); ?>";
+          var obj = JSON.parse(data);
+
+          if(obj == 1)
+          {
+            alert('Successfully registered');
+            window.location = "<?php echo base_url('index.php/Recharge_controller/login'); ?>";
+          }
+          else if(obj == 0)
+          {
+            alert('already registered number');
+          }
+           
 
         }
     });

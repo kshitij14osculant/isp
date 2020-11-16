@@ -278,8 +278,17 @@
     {
       $arr1=$this->input->post();
           // print_r($arr1);
+
+      $this->db->where('mobile',$arr1['mobile']);
+      $res = $this->db->get('users');
             
-          $arr = Array(
+      if($res->num_rows() > 0)
+      {
+        print_r(json_encode(0));
+      } 
+      elseif ($res->num_rows() == 0) {
+             # code...
+        $arr = Array(
                  'subscriber_id'  => $arr1['subscriber_id'],
                  'fullname'       => $arr1['fullname'],
                  'email'          => $arr1['email'],
@@ -290,6 +299,9 @@
                  'created_at'     => date('Y-m-d'),
           );
             $this->db->insert('users',$arr);
+            print_r(json_encode(1));
+           }     
+
 
             
     }

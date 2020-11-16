@@ -102,7 +102,7 @@ class Recharge_controller extends CI_Controller {
  {
    $this->load->model('User_model');
    $this->User_model->registeration();
-   print_r(json_encode(1));
+   
  }
 
 }
