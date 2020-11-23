@@ -259,8 +259,11 @@ footer {
   -webkit-text-size-adjust: none;
   font-weight: 400;
   position: absolute;
+  /*position: relative;*/
   font-size: 18px;
   top: 115px;
+  /*top:1%;*/
+  z-index: -1;
 }
 .back-button a {
   color: #0092ed;

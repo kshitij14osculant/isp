@@ -30,7 +30,7 @@ include('include/header.php'); ?>
                 <div class="form-group">
                     <div class="form-group phone-field">
                         <label class="sel active">Subscriber ID / Registered Mobile Number </label>
-                        <input class="form-control" type="tel" id="Inputsubscriber_id" placeholder="" maxlength="10" tabindex="0" value="">
+                        <input class="form-control" type="tel" id="Inputsubscriber_id" placeholder="" maxlength="10" tabindex="0" value="" required>
                     </div>
                 </div>
             </div>
@@ -38,7 +38,7 @@ include('include/header.php'); ?>
                 <div class="form-group">
                     <div class="form-group phone-field">
                         <label class="sel active">Amount</label>
-                        <input class="form-control" type="tel" id="amount" placeholder="" maxlength="10" tabindex="0" value="">
+                        <input class="form-control" type="tel" id="amount" placeholder="" maxlength="10" tabindex="0" value="" required>
                     </div>
                 </div>
             </div>
@@ -47,7 +47,7 @@ include('include/header.php'); ?>
                 <div class="form-group">
                     <div class="form-group phone-field">
                         <label class="sel active">Transation id</label>
-                        <input class="form-control" type="tel" id="transaction_id" placeholder="" maxlength="10" tabindex="0" value="">
+                        <input class="form-control" type="tel" id="transaction_id" placeholder="" maxlength="10" tabindex="0" value="" required>
                     </div>
                 </div>
             </div>

@@ -29,15 +29,21 @@ image-rendering: pixelated;
                     <a class="btn-link" href="">Recharj</a>
                 </li> -->
                 <li class="btn">
-                    <a class="btn-link" href="<?php echo base_url('index.php/Recharge_controller/login') ?>">Recharge</a>
+                    <!-- <a class="btn-link" href="<?php echo base_url('index.php/Recharge_controller/login') ?>">Recharge</a> -->
                 </li>
                 <li class="iconlogin">
                     <!-- <a href=""><i class="fa fa-user-o"></i></a> -->
                     <?php if($this->session->userdata('user_id'))
-                    { ?>
+                    { 
+                     ?>
 
-             <a style="color:white;padding: 0;font-size: 15px;"class="btn-link " href="<?php echo base_url('index.php/Recharge_controller/logout') ?>">Logout</a>
-                    <?php }?>
+                     <!-- <a style="color:white;padding: 0;font-size: 15px;"class="btn-link " href="<?php echo base_url('index.php/Recharge_controller/logout') ?>">Logout</a> -->
+
+                     <a style="color:white;padding: 0;font-size: 15px;"class="btn-link " href="<?php echo base_url('index.php/Recharge_controller/') ?>">Logout</a>
+
+                    <?php 
+                        }
+                     ?>
                 </li>
             </ul>
         </div>
