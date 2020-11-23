@@ -39,7 +39,7 @@ image-rendering: pixelated;
 
                      <!-- <a style="color:white;padding: 0;font-size: 15px;"class="btn-link " href="<?php echo base_url('index.php/Recharge_controller/logout') ?>">Logout</a> -->
 
-                     <a style="color:white;padding: 0;font-size: 15px;"class="btn-link " href="<?php echo base_url('index.php/Recharge_controller/') ?>">Logout</a>
+                     <a style="color:white;padding: 0;font-size: 15px;"class="btn-link " href="<?php echo base_url('index.php/Recharge_controller/logout') ?>">Logout</a>
 
                     <?php 
                         }
@@ -73,10 +73,22 @@ image-rendering: pixelated;
         <div class="slidebar-main">
             <div class="link-section-top">
                 <ul class="list">
-                    <li class="list-item active"><a href="../home.php"><span class="fa fa-home"> </span><span class="list-item-text">Home</span></a></li>
+                    <li class="list-item active"><a href="<?php echo base_url('index.php/Recharge_controller') ?>"><span class="fa fa-home"> </span><span class="list-item-text">Home</span></a></li>
+                     <?php if($this->session->userdata('user_id'))
+                    { 
+                     ?>
+
+                      <li class="list-item active"><a style="color:white;padding: 0;font-size: 15px;"class="btn-link " href="<?php echo base_url('index.php/Recharge_controller/logout') ?>"></a> <span class="fa fa-home"> </span><span class="list-item-text">Logout</span></a></li>
+
+                     <<!-- a style="color:white;padding: 0;font-size: 15px;"class="btn-link " href="<?php echo base_url('index.php/Recharge_controller/logout') ?>">Logout</a> -->
+
+                    <?php 
+                        }
+                     ?>
+                    <!-- <li class="list-item active"><a href="../home.php"><span class="fa fa-home"> </span><span class="list-item-text">Home</span></a></li>
                     <li class="list-item null"><a href="#" ><span class="fa fa-tv"> </span><span class="list-item-text">Watch</span></a></li>
                     <li class="list-item null"><a href="#!"><span class="fa fa-check"> </span><span class="list-item-text">Explore</span></a></li>
-                    <li class="list-item null"><a href="#!"><span class="fa fa-comment-o"> </span><span class="list-item-text">Get Help</span></a></li>
+                    <li class="list-item null"><a href="#!"><span class="fa fa-comment-o"> </span><span class="list-item-text">Get Help</span></a></li> -->
                 </ul>
             </div>
         </div>
