@@ -93,7 +93,9 @@ $("#formId").click(function(event){
 
         success:function(data)
         {
-          
+            var obj = JSON.parse(data);
+           console.log(obj);
+           // window.location = data;
            window.location = "<?php echo base_url('index.php/Recharge_controller/myacc'); ?>";
 
         }

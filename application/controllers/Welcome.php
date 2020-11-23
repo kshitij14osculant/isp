@@ -139,8 +139,8 @@ class Welcome extends CI_Controller {
               else if($level === '1' && $category === 'user'){
                
                    print_r(json_encode(1));
-                   $data['userpackage'] = $this->User_model->userpackageplans();
-                   $this->load->view('Recharge/myacc.php',$data);
+                   // $data['userpackage'] = $this->User_model->userpackageplans();
+                   // $this->load->view('Recharge/myacc.php',$data);
 
               }
               else{

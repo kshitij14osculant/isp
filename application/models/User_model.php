@@ -351,6 +351,22 @@
             $this->db->where('id',$arr1['userid']);
             $this->db->update('users',$arr);
 
+
+        // $this->email->from('2015kshitij14@gmail.com','Kshitij');
+        // $this->email->to($arr1['email']);
+        // $this->email->subject('Greetings');
+        // $this->email->message("Thans");
+        // if(!$this->email->send())
+        // {
+        //     show_error($this->email->print_debugger());
+        //     echo "Email not send";
+        // }
+        // else
+        // {
+        //     echo "Email has been sent";
+        //     echo "successfully updated";  
+        // }
+
        echo "successfully updated";       
 
     }
